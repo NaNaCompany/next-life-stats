@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {validate,simulate,EVENTS,KEYS} from '../../docs/zh/engine.js';
+test('100点和10点单位验证，拒绝遗漏、负数和超额',()=>{assert.ok(validate({health:30,luck:30,social:20,focus:20}));for(const s of [{health:25,luck:25,social:25,focus:25},{health:110,luck:-10,social:0,focus:0},{health:100}])assert.equal(validate(s),false);});
+test('相同的场景/分布，相同的结局，不断的输入',()=>{const s={health:20,luck:20,social:20,focus:40},before=JSON.stringify(s);assert.deepEqual(simulate(s),simulate(s));assert.equal(JSON.stringify(s),before);});
+test('揭示事件计算、边界和整体能力影响',()=>{const r=simulate({health:30,luck:20,social:10,focus:40});assert.equal(r.events[0].value,100);assert.equal(r.events[1].value,40);assert.equal(r.events[4].value,140);assert.ok(r.events[4].success);for(const k of KEYS)assert.ok(EVENTS.some(e=>e.weights[k]>0));assert.throws(()=>simulate({}));});

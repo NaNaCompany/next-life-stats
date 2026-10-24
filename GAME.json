@@ -1,0 +1,70 @@
+{
+  "slug": "next-life-stats",
+  "url": "https://nanalab.kr/next-life-stats/",
+  "titles": {
+    "ko": "다음 생에 쓸 100점, 어디에 걸어야 잘 풀릴까?",
+    "en": "Where would you put 100 points for your next life?",
+    "zh": "来生的一百分，你会如何分配？",
+    "es": "¿Cómo repartirías cien puntos para tu próxima vida?"
+  },
+  "descriptions": {
+    "ko": "혼자 즐기고 나만의 결과를 공유하는 작은 게임.",
+    "en": "A small solo game. Play, discover your result, and share.",
+    "zh": "独自挑战，看看自己的成绩，再分享给朋友。",
+    "es": "Un juego para ti. Descubre tu resultado y compártelo."
+  },
+  "color": "#5d647b",
+  "cardLines": {
+    "ko": [
+      "다음 생을 위한 100점.",
+      "어디에 걸겠습니까?"
+    ],
+    "en": [
+      "100 points for a new life.",
+      "Where will you invest them?"
+    ],
+    "zh": [
+      "来生只有一百分。",
+      "你会如何分配？"
+    ],
+    "es": [
+      "Cien puntos. Otra vida.",
+      "¿Dónde los invertirás?"
+    ]
+  },
+  "brands": {
+    "ko": "다음 생 기본 능력치 경매",
+    "en": "One Hundred Points",
+    "zh": "来生的一百分",
+    "es": "Cien puntos para otra vida"
+  },
+  "hero": {
+    "en": {
+      "first": "100 points for your next life.",
+      "last": "Where would you put them?",
+      "intro": [
+        "Stamina, luck, social skills or focus?",
+        "Spend your hundred points and face five events.",
+        "Every rule is revealed before you begin."
+      ]
+    },
+    "zh": {
+      "first": "来生只有一百分，",
+      "last": "怎样分配才能更顺利？",
+      "intro": [
+        "体力、运气、社交、专注，你选什么？",
+        "分配好一百分，迎接五个事件。",
+        "开始前会公开所有通过规则。"
+      ]
+    },
+    "es": {
+      "first": "Cien puntos para otra vida.",
+      "last": "¿Dónde los invertirías?",
+      "intro": [
+        "¿Resistencia, suerte, sociabilidad o concentración?",
+        "Reparte tus cien puntos y afronta cinco sucesos.",
+        "Todas las reglas se muestran antes de empezar."
+      ]
+    }
+  }
+}

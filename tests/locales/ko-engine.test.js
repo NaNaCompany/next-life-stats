@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {validate,simulate,EVENTS,KEYS} from '../../docs/ko/engine.js';
+test('100점과 10점 단위 검증, 누락·음수·초과 거부',()=>{assert.ok(validate({health:30,luck:30,social:20,focus:20}));for(const s of [{health:25,luck:25,social:25,focus:25},{health:110,luck:-10,social:0,focus:0},{health:100}])assert.equal(validate(s),false);});
+test('같은 시나리오·배분은 같은 결말, 입력 불변',()=>{const s={health:20,luck:20,social:20,focus:40},before=JSON.stringify(s);assert.deepEqual(simulate(s),simulate(s));assert.equal(JSON.stringify(s),before);});
+test('공개된 사건 계산값·경계와 전 능력 영향',()=>{const r=simulate({health:30,luck:20,social:10,focus:40});assert.equal(r.events[0].value,100);assert.equal(r.events[1].value,40);assert.equal(r.events[4].value,140);assert.ok(r.events[4].success);for(const k of KEYS)assert.ok(EVENTS.some(e=>e.weights[k]>0));assert.throws(()=>simulate({}));});
